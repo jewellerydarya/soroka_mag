@@ -1,3 +1,4 @@
+/* === Base Styles === */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
@@ -6,6 +7,7 @@ body {
   line-height: 1.6;
 }
 
+/* === Header === */
 .header {
   background-color: #f7e9e3;
   text-align: center;
@@ -15,7 +17,25 @@ body {
   color: #a87c6b;
 }
 
-.gallery, .collection-grid {
+/* === Founder Section === */
+.founder {
+  padding: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.founder img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Gallery & Collections === */
+.gallery,
+.collection-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
@@ -23,18 +43,21 @@ body {
   justify-content: center;
 }
 
-.gallery img, .collection-grid img, .founder img {
+.gallery img,
+.collection-grid img {
   width: 100%;
   border-radius: 10px;
 }
 
-.intro, .founder {
+/* === Intro Section === */
+.intro {
   padding: 2rem;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
+/* === Buttons === */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -43,14 +66,21 @@ body {
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+  background-color: #936655;
+}
+
+/* === Item Titles === */
 .item h3 {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: #5e443a;
 }
 
+/* === Footer === */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -65,15 +95,22 @@ footer a {
   margin: 0 10px;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
 @media screen and (max-width: 600px) {
   .header {
     font-size: 1.5rem;
   }
-  .intro, .founder {
+
+  .intro,
+  .founder {
     padding: 1rem;
   }
+
   .btn {
     padding: 0.5rem 1rem;
   }
 }
-
